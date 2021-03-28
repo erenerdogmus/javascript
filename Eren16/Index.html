@@ -1,0 +1,288 @@
+﻿<html>
+<head>
+    <script src="../Eren/Scripts/jquery-3.6.0.min.js"></script>
+    <title>Kombinasyon Projesi</title>
+
+    <style>
+
+        .apartman {
+            width: 350px;
+            height: auto;
+            margin: 70px auto;
+        }
+
+        .baca {
+            width: 25px;
+            height: 50px;
+            background-color: #960;
+            margin: 0px 0px 0px 250px;
+        }
+
+        .catý {
+            width: 250px;
+            height: 250px;
+            background-color: #930;
+            transform: rotate(45deg);
+            margin: -50px 0px 0px 50px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .gövde {
+            width: 330px;
+            height: 470px;
+            background-color: #0cf;
+            margin: -125px 0px 0px 0px;
+            z-index: 2;
+            position: relative;
+            padding: 30px 0px 0px 20px;
+        }
+
+        .p1 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .p2 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 65px;
+        }
+
+        .p3 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .p4 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 65px;
+        }
+
+        .p5 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .p6 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 65px;
+        }
+
+        .p7 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .p8 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 65px;
+        }
+
+        .p9 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .p10 {
+            width: 120px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 15px 65px;
+        }
+
+        .p12 {
+            width: 58px;
+            height: 50px;
+            background: #ff9;
+            border: 1px solid black;
+            float: left;
+            margin: 0px 0px 0px 48px;
+        }
+
+        .kapýtabela {
+            width: 90px;
+            height: 152px;
+            float: left;
+            margin: -11px 0 0 108px;
+        }
+
+        .tabela {
+            width: 88px;
+            height: 25px;
+            background-color: white;
+            border: 1px solid black;
+            font: bold 11px tahoma;
+            text-align: center;
+        }
+
+        .kapý {
+            width: 86px;
+            height: 112px;
+            background-color: #330;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            border-top: 2px solid black;
+            margin: 5px 0 0 0;
+        }
+
+        .kapýkolu {
+            width: 15px;
+            height: 3px;
+            background-color: yellow;
+            margin: 56px 0 0 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="
+    height: auto;
+    margin: 70px auto;
+    position: absolute;
+    left: 580px;
+    z-index: 55;">
+        <input type="text" name="Girdi" placeholder="Değer Girin" id="Girdi" min="1" max="9" onkeyup="Uzunluk()" />
+        <br />
+        <center>
+            <button type="button" onclick="Girdi()">Gönder</button>
+        </center>
+        <div id="message"></div>
+    </div>
+
+
+
+
+    <div class="apartman">
+
+        <div class="baca"></div>
+        <div class="catý">
+
+
+
+        </div>
+        <div class="gövde">
+
+            <div class="p1">
+
+            </div>
+            <div class="p2">
+
+            </div>
+            <div class="p3">
+
+            </div>
+
+            <div class="p4">
+
+            </div>
+            <div class="p5">
+
+            </div>
+            <div class="p6">
+
+            </div>
+
+            <div class="p7">
+
+            </div>
+            <div class="p8">
+
+            </div>
+            <div class="p9">
+
+            </div>
+
+            <div class="p10">
+
+            </div>
+
+            <div class="kapýtabela">
+                <div class="tabela">EREN ERDOĞMUŞ</div>
+                <div class="kapý">
+                    <div class="kapýkolu"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function Girdi() {
+            var deger = $("#Girdi").val().length;
+            if (deger < 1) {
+                alert("Max 9 krakter Minimum 1 krakter");
+                return false;
+            }
+            if (deger > 9) {
+                $("#Girdi").val($("#Girdi").val().substring(0, 9))
+                alert("Max 9 krakter Minimum 1 krakter");
+                return false;
+            }
+            var kontrolS = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/i);
+            if (kontrolS.test($("#Girdi").val()) == false) {
+                alert("En az 1 rakam, 1 büyük harf, 1 küçük harf ve en fazla 9 karakter içermelidir ");
+                return false;
+            }
+            for (var i = 0; i < deger; i++) {
+                if (i==0) {
+                    var dd = $("#Girdi").val().charAt(Math.floor(Math.random() * deger));
+                    $(".p1").html("1.Krakter " + dd + "</br>");
+                }
+                else {
+                    var krakter = "";
+                    for (var ii = 0; ii <= i; ii++) {
+                        krakter = krakter + $("#Girdi").val().charAt(Math.floor(Math.random() * deger));
+                    }
+                    var sayi = i;
+                    sayi++;
+                    $(".p" + sayi).html(sayi + ".Krakter " + krakter + "</br>");
+                }
+
+            }
+        }
+        function Uzunluk() {
+
+        }
+    </script>
+</body>
+</html>
